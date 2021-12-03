@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 import styled from "styled-components";
 import Badge from "@mui/material/Badge";
 import SearchIcon from "@mui/icons-material/Search";
@@ -74,8 +75,8 @@ const Navbar = () => {
           <Logo>SparkleRocks</Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <Link to="/register"><MenuItem>REGISTER</MenuItem></Link>
+          <Link to="/login"><MenuItem>SIGN IN</MenuItem></Link>
           <MenuItem>
             <Badge badgeContent={4} color='primary'>
               <ShoppingCartOutlinedIcon color='action' />
