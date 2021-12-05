@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mobile, tablet } from '../../responsive';
 import Navbar from '../../components/Navbar/Navbar';
 import Announcement from '../../components/Announcement/Announcement';
 import Newsletter from '../../components/Newsletter/Newsletter';
@@ -11,6 +12,7 @@ const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 50px;
   display: flex;
+  ${tablet({padding: "10px", flexDirection: "column"})};
 `;
 
 const ImgContainer = styled.div`
@@ -21,11 +23,13 @@ const Image = styled.img`
   width: 100%;
   height: 90vh;
   object-fit: cover;
+   ${tablet({height: "50vh"})};
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
   padding: 0 50px;
+   ${tablet({padding: "10px"})};
 `;
 const Title = styled.h1`
   font-weight: 300;
@@ -46,6 +50,7 @@ const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+   ${tablet({width: "100%"})};
 `;
 
 const Filter = styled.div`
@@ -79,6 +84,7 @@ const AddContainer = styled.div`
   width: 50%;
   display: flex;
   justify-content: space-between;
+  ${tablet({width: "100%"})};
 `;
 
 const AmountContainer = styled.div`

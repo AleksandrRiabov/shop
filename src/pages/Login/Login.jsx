@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {mobile} from '../../responsive';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import Announcement from '../../components/Announcement/Announcement';
@@ -22,6 +23,7 @@ const Wrapper = styled.div`
  padding: 20px;
  width: 30%;
  background: #fff;
+ ${mobile({width: "80%"})}
 `;
 
 const Title = styled.h2`

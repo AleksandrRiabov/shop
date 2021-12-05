@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mobile, tablet } from '../../responsive';
 import Navbar from '../../components/Navbar/Navbar';
 import Announcement from '../../components/Announcement/Announcement';
 import Footer from '../../components/Footer/Footer';
@@ -9,6 +10,7 @@ const Container = styled.div``;
 
 const Wrapper = styled.div`
  padding: 20px;
+ ${tablet({padding: "10px"})};
 `;
 
 const Title = styled.h1`
@@ -35,7 +37,9 @@ const TopButton = styled.button`
  border: ${(props) => props.type === 'filled' && 'none'};
 `;
 
-const TopTexts = styled.div``;
+const TopTexts = styled.div`
+${tablet({display: "none"})};
+`;
 const TopText = styled.span`
  text-decoration: underline;
  cursor: pointer;
@@ -45,6 +49,7 @@ const TopText = styled.span`
 const Bottom = styled.div`
  display: flex;
  justify-content: space-between;
+ ${tablet({flexDirection: "column"})};
 `;
 
 const Info = styled.div`
@@ -55,6 +60,7 @@ const Product = styled.div`
  display: flex;
  justify-content: space-between;
  margin: 10px 0;
+ ${tablet({flexDirection: "column"})};
 `;
 
 const Hr = styled.hr`
@@ -108,11 +114,13 @@ const ProductAmountContainer = styled.div`
 const ProductAmount = styled.span`
  font-size: 24px;
  margin: 5px;
+ ${tablet({padding: " 5px 15px"})};
 `;
 
 const ProductPrice = styled.span`
  font-weight: 300;
  font-size: 30px;
+  ${tablet({marginBottom: "15px"})};
 `;
 
 const Summary = styled.div`

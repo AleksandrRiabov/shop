@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { tablet } from '../../responsive';
 import Navbar from '../../components/Navbar/Navbar';
 import Announcement from '../../components/Announcement/Announcement';
 import Products from '../../components/Products/Products';
@@ -10,7 +11,6 @@ const Container = styled.div``;
 const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
 `;
 const Title = styled.h1`
   margin: 20px;
@@ -18,17 +18,20 @@ const Title = styled.h1`
 
 const Filter = styled.div`
   margin: 20px;
+  ${tablet({margin: "0 20px", display: "Flex", flexDirection: "column"})}
 `;
 
 const FilterText = styled.span`
   font-size: 20px;
   font-weight: 600;
   margin-right: 20px;
+  ${tablet({margin: "0"})}
 `;
 
 const Select = styled.select`
   padding: 10px;
   margin-right: 20px;
+  ${tablet({margin: "10px 0"})}
 `;
 
 const Option = styled.option`

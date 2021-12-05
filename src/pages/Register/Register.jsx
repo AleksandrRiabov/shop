@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {mobile} from '../../responsive';
 import Navbar from '../../components/Navbar/Navbar';
 import Announcement from '../../components/Announcement/Announcement';
 import Footer from '../../components/Footer/Footer';
@@ -21,6 +22,7 @@ const Wrapper = styled.div`
  padding: 20px;
  width: 40%;
  background: #fff;
+  ${mobile({width: "90%"})}
 `;
 
 const Title = styled.h2`
